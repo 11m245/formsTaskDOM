@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="forms.css">
+    <title>Forms Task</title>
+</head>
+<body>
+    <h1 id="title" style= "text-align: center" >Form and Table</h1>
+    <p id="description" style= "text-align: center" >Using Bootstrap forms and append data to the table from DOM</p>
+    <div class="container d-flex align-items-start">
+       
+        <form id="form" name="signup"  class="container col-4" >
+            <div class="mb-2">
+                <label class= "form-label" for="first-name">First Name</label>
+                <input id="first-name" class="form-control" type="text" name="fname" placeholder="enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label class= "form-label" for="last-name">Last Name</label>
+                <input id="last-name"class="form-control" type="text" name="lname" >
+            </div>
+    
+    
+    
+            <div class="mb-2">
+                <label class="form-check-label" >Gender</label>
+                
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="gender1" name="gender" class="form-check-input" value="male">
+                    <label for="gender1" class="form-check-label">Male</label>
+                </div>
+    
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="gender2" name="gender" class="form-check-input" value="female">
+                    <label for="gender2" class="form-check-label">Female</label>
+                </div>
+               
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="gender3" name="gender" class="form-check-input" value="others" >
+                    <label for="gender3" class="form-check-label">Others</label>
+                </div>
+            </div>
+    
+            <div class="mb-2">
+                
+                <label class="form-check-label" >Choice of Food</label>
+                <span id="any2"></span>
+                
+                <br>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" onclick="checkMaxCheck()" id="food1" name="cfood" class="form-check-input" value="meals" >
+                    <label for="food1" class="form-check-label">Meals</label>
+                </div>
+    
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" onclick="checkMaxCheck()" id="food2" name="cfood" class="form-check-input" value="friedrice" >
+                    <label for="food2" class="form-check-label">Fried Rice</label>
+                </div>
+               
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" onclick="checkMaxCheck()" id="food3" name="cfood" class="form-check-input" value="chappathi">
+                    <label for="food3" class="form-check-label">Chappathi</label>
+                </div>
+    
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" onclick="checkMaxCheck()" id="food4" name="cfood" class="form-check-input" value="Briyani">
+                    <label for="food4" class="form-check-label">Briyani</label>
+                </div>
+               
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" onclick="checkMaxCheck()" id="food5" name="cfood" class="form-check-input" value="curdrice">
+                    <label for="food5" class="form-check-label">Curd Rice</label>
+                </div>
+            </div>
+    
+
+            <div class="mb-2">
+                <label class= "form-label" for="email">e-mail</label>
+                <input class="form-control" type="e-mail" name="email" id="email" placeholder="abc@gmail.com" required>
+            </div>
+
+            
+            <div class="mb-2">
+                <label class= "form-label" for="address">Address</label>
+                <textarea id="address" class="form-control" name="address" id="address" required></textarea> 
+            </div>
+    
+            <div class="mb-2">
+                <label class= "form-label" for="state">State</label>
+                <input class="form-control" type="text" name="state" id="state">
+            </div>
+            <div class="mb-2">
+                <label class= "form-label" for="country">Country</label>
+                <input class="form-control" type="text" name="country" id="country">
+            </div>
+            <div class="mb-2">
+                <label class= "form-label"  for="pincode">Pincode</label> 
+                <input required id="pincode" class="form-control"  type="text" name="pin" minlength="6" maxlength="6">
+            </div>
+    
+            <div class="row justify-content-center ">
+                <button id="submit" type="submit" class="btn btn-success align-self-center col-4">Add Data Signup</button>
+            </div>
+        </form>
+    
+        <table id="table1" class="table table-responsive-md border-primary col">
+            <thead>
+              <tr>
+                <th >S.No</th>
+                <th >First Name</th>
+                <th >Last Name</th>
+                <th >Gender</th>
+                <th >Choice of Food</th>
+                <th>email</th>
+                <th >Address</th>
+                <th >State</th>
+                <th >Country</th>
+                <th >Pincode</th>
+
+              </tr>
+            </thead>
+            <tbody>
+            
+
+            </tbody>
+          </table>
+
+
+
+    </div>
+  
+
+    <script src="formsjs.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+
+</body>
+</html>
